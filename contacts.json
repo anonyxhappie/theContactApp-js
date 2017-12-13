@@ -1,0 +1,29 @@
+{
+    "contacts":[
+        {
+            "name":"Akshay Saini",
+            "photoUrl": "images/akshay.jpg",
+            "contact": "+919872472565"
+        },
+        {
+            "name":"Jai Saini",
+            "photoUrl": "images/jai.png",
+            "contact": "+919772300600"
+        },
+        {
+            "name":"Asha Saini",
+            "photoUrl": "images/asha.png",
+            "contact": "+919784671000"
+        },
+        {
+            "name":"Manish Saini",
+            "photoUrl": "images/manish.gif",
+            "contact": "+917414082897"
+        },
+        {
+            "name":"Bob Marley",
+            "photoUrl": "images/linux.png",
+            "contact": "+919876543210"
+        }
+    ]
+}

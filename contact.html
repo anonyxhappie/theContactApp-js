@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> -->
+    <style>
+        .container{
+            margin-top: 50px;
+        }
+        .img-thumbnail{
+            width: 200px;
+            height: 200px;
+        }
+        .col-md-9{
+            padding-top: 40px;
+            padding-left: 40px;
+        }
+        .btn{
+            text-decoration: none;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img id="photo" class="img-thumbnail rounded-circle border-0" src="https://avatars1.githubusercontent.com/u/9645332?s=400&v=4">                 
+            </div>
+            <div class="col-md-9">
+                <h3><script>document.write(sessionStorage['name']);</script></h3>
+                <h5><script>document.write(sessionStorage['contact']);</script></h5>
+                <a href="tel:+919872472565" id="tel" class="btn btn-success rounded border-0">Call</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <script>
+        document.getElementById('photo').setAttribute('src', sessionStorage['photoUrl']);
+        document.getElementById('tel').setAttribute('href', 'tel:'+sessionStorage['contact']);
+        document.title = sessionStorage['name'] + ' | Contact Details';
+    </script>
+</body>
+</html>

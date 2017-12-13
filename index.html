@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TheContactApp | By - anonyxhappie</title>
+   <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+</head>
+<body>
+    <div class="container">
+        <h3 class="align-center">
+            My Contacts
+        </h3>
+        <input type="text" id="filterInput" placeholder="Search contact...">
+        <ul id="contacts" class="collection with-header">
+            <!-- <li class="collection-header">
+                <h5>A</h5>
+            </li> -->
+        </ul>
+    </div>
+    <script>
+        let filterInput = document.getElementById('filterInput');
+        filterInput.addEventListener('keyup', filterNames);
+
+        function filterNames(){
+            
+        let filterValue = document.getElementById('filterInput').value.toUpperCase();
+        let ul = document.getElementById('contacts');
+            let li = ul.querySelectorAll('li.collection-item');
+            
+            for (let index = 0; index < li.length; index++) {
+                let a = li[index].getElementsByTagName('a')[0];
+                if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                    li[index].style.display = '';
+                } else {
+                    li[index].style.display = 'none';
+                }
+            }
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
