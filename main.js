@@ -11,7 +11,7 @@ xhttp.onreadystatechange = function(){
         document.getElementById('contacts').innerHTML = contactList;
     }
 };
-xhttp.open('GET', 'http://localhost:5500/contacts.json', true);
+xhttp.open('GET', 'contacts.json', true);
 xhttp.send();
 
 function saveDetails(contact){
